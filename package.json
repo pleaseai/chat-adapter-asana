@@ -1,0 +1,60 @@
+{
+  "name": "chat-adapter-asana",
+  "version": "0.1.0",
+  "description": "Asana adapter for Chat SDK — task comment threads",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "chat": "^4.0.0"
+  },
+  "dependencies": {
+    "@chat-adapter/shared": "^4.0.0"
+  },
+  "devDependencies": {
+    "@chat-adapter/state-memory": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "chat": "^4.20.2",
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "chat-sdk",
+    "chat-adapter",
+    "asana",
+    "bot",
+    "task-comments"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pleaseai/chat-adapter-asana.git"
+  },
+  "homepage": "https://github.com/pleaseai/chat-adapter-asana#readme",
+  "bugs": {
+    "url": "https://github.com/pleaseai/chat-adapter-asana/issues"
+  }
+}
