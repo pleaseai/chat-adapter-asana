@@ -11,6 +11,9 @@
     "standards@passionfactory": true,
     "testing@passionfactory": true,
     "tidy-first@passionfactory": true,
+    "please@passionfactory": true,
+    "eslint-lsp@code-intelligence": true,
+    "gardening@passionfactory": true,
     "typescript-lsp@code-intelligence": true,
     "vitest@pleaseai": true
   },
