@@ -11,13 +11,13 @@ import type {
   ThreadInfo,
   WebhookOptions,
 } from 'chat'
-import { ConsoleLogger, Message, parseMarkdown, stringifyMarkdown } from 'chat'
-import { ValidationError } from '@chat-adapter/shared'
 import type { AsanaApiClient } from './api'
-import { createAsanaApiClient } from './api'
-import { toAst, renderPostable } from './format-converter'
 import type { AsanaAdapterConfig, AsanaRawMessage, AsanaThreadId } from './types'
-import { isHandshake, createHandshakeResponse, verifySignature, extractStoryEvents } from './webhook'
+import { ValidationError } from '@chat-adapter/shared'
+import { ConsoleLogger, Message, stringifyMarkdown } from 'chat'
+import { createAsanaApiClient } from './api'
+import { renderPostable, toAst } from './format-converter'
+import { createHandshakeResponse, extractStoryEvents, isHandshake, verifySignature } from './webhook'
 
 export class AsanaAdapter implements Adapter<AsanaThreadId, AsanaRawMessage> {
   readonly name = 'asana'
@@ -92,7 +92,8 @@ export class AsanaAdapter implements Adapter<AsanaThreadId, AsanaRawMessage> {
     const storyEvents = extractStoryEvents(payload as any)
 
     for (const event of storyEvents) {
-      if (!event.parent?.gid || !this.chat) continue
+      if (!event.parent?.gid || !this.chat)
+        continue
 
       const taskGid = event.parent.gid
       const storyGid = event.resource.gid

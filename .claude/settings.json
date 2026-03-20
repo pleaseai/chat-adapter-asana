@@ -1,0 +1,56 @@
+{
+  "env": {
+    "ENABLE_TOOL_SEARCH": "true"
+  },
+  "enabledPlugins": {
+    "bun@passionfactory": true,
+    "chat-sdk@pleaseai": true,
+    "context@passionfactory": true,
+    "github@passionfactory": true,
+    "review@passionfactory": true,
+    "standards@passionfactory": true,
+    "testing@passionfactory": true,
+    "tidy-first@passionfactory": true,
+    "please@passionfactory": true,
+    "eslint-lsp@code-intelligence": true,
+    "gardening@passionfactory": true,
+    "typescript-lsp@code-intelligence": true,
+    "vitest@pleaseai": true
+  },
+  "extraKnownMarketplaces": {
+    "passionfactory": {
+      "source": {
+        "source": "github",
+        "repo": "chatbot-pf/engineering-standards"
+      },
+      "autoUpdate": true
+    },
+    "pleaseai": {
+      "source": {
+        "source": "github",
+        "repo": "pleaseai/claude-code-plugins"
+      },
+      "autoUpdate": true
+    },
+    "code-intelligence": {
+      "source": {
+        "source": "github",
+        "repo": "chatbot-pf/code-intelligence"
+      },
+      "autoUpdate": true
+    }
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bun install --ignore-scripts"
+          }
+        ]
+      }
+    ]
+  }
+}
