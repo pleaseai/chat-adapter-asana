@@ -1,12 +1,12 @@
-import { describe, it, expect } from 'vitest'
-import { AsanaAdapter } from './adapter'
 import type { AsanaRawMessage } from './types'
+import { describe, expect, it } from 'vitest'
+import { AsanaAdapter } from './adapter'
 
 const adapter = new AsanaAdapter({
   accessToken: 'test-token',
 })
 
-describe('AsanaAdapter', () => {
+describe('asanaAdapter', () => {
   it('has correct name', () => {
     expect(adapter.name).toBe('asana')
   })

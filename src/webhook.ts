@@ -1,5 +1,5 @@
-import { createHmac } from 'node:crypto'
 import type { AsanaWebhookEvent, AsanaWebhookPayload } from './types'
+import { createHmac } from 'node:crypto'
 
 /**
  * Check if the request is an Asana webhook handshake.
@@ -34,7 +34,8 @@ export function verifySignature(body: string, signature: string, secret: string)
  * Returns events where a comment (story) was added to a task.
  */
 export function extractStoryEvents(payload: AsanaWebhookPayload): AsanaWebhookEvent[] {
-  if (!Array.isArray(payload.events)) return []
+  if (!Array.isArray(payload.events))
+    return []
   return payload.events.filter(
     e => e.resource.resource_type === 'story' && e.action === 'added' && e.parent?.resource_type === 'task',
   )

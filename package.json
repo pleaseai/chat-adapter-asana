@@ -1,17 +1,33 @@
 {
   "name": "chat-adapter-asana",
+  "type": "module",
   "version": "0.1.0",
   "description": "Asana adapter for Chat SDK — task comment threads",
-  "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "homepage": "https://github.com/pleaseai/chat-adapter-asana#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pleaseai/chat-adapter-asana.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pleaseai/chat-adapter-asana/issues"
+  },
+  "keywords": [
+    "chat-sdk",
+    "chat-adapter",
+    "asana",
+    "bot",
+    "task-comments"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     }
   },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -22,6 +38,8 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "clean": "rm -rf dist"
   },
   "peerDependencies": {
@@ -31,31 +49,17 @@
     "@chat-adapter/shared": "^4.0.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^7.7.3",
     "@chat-adapter/state-memory": "^4.0.0",
     "@types/node": "^22.0.0",
     "@vitest/coverage-v8": "^4.1.0",
     "chat": "^4.20.2",
+    "eslint": "^10.0.3",
     "tsup": "^8.3.0",
     "typescript": "^5.7.0",
     "vitest": "^4.0.0"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "keywords": [
-    "chat-sdk",
-    "chat-adapter",
-    "asana",
-    "bot",
-    "task-comments"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pleaseai/chat-adapter-asana.git"
-  },
-  "homepage": "https://github.com/pleaseai/chat-adapter-asana#readme",
-  "bugs": {
-    "url": "https://github.com/pleaseai/chat-adapter-asana/issues"
   }
 }

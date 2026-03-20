@@ -1,6 +1,6 @@
 import { createHmac } from 'node:crypto'
-import { describe, it, expect } from 'vitest'
-import { isHandshake, createHandshakeResponse, verifySignature, extractStoryEvents } from './webhook'
+import { describe, expect, it } from 'vitest'
+import { createHandshakeResponse, extractStoryEvents, isHandshake, verifySignature } from './webhook'
 
 describe('webhook handshake', () => {
   it('detects handshake request', () => {

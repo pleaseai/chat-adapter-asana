@@ -1,7 +1,7 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { createAsanaApiClient } from './api'
 
-describe('AsanaApiClient', () => {
+describe('asanaApiClient', () => {
   const mockFetch = vi.fn()
   const originalFetch = globalThis.fetch
 

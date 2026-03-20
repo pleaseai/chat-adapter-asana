@@ -1,20 +1,20 @@
-import { NetworkError, AuthenticationError, ResourceNotFoundError } from '@chat-adapter/shared'
 import type { AsanaRawMessage, AsanaTask } from './types'
+import { AuthenticationError, NetworkError, ResourceNotFoundError } from '@chat-adapter/shared'
 
 const TIMEOUT_MS = 30_000
 const ADAPTER_NAME = 'asana'
 
 export interface AsanaApiClient {
-  deleteStory(storyGid: string): Promise<void>
-  fetchStories(taskGid: string, options?: { limit?: number, offset?: string }): Promise<{
+  deleteStory: (storyGid: string) => Promise<void>
+  fetchStories: (taskGid: string, options?: { limit?: number, offset?: string }) => Promise<{
     data: AsanaRawMessage[]
     next_page: { offset: string } | null
   }>
-  fetchTask(taskGid: string): Promise<AsanaTask>
-  likeStory(storyGid: string): Promise<void>
-  postStory(taskGid: string, text: string, options?: { isPinned?: boolean }): Promise<AsanaRawMessage>
-  unlikeStory(storyGid: string): Promise<void>
-  updateStory(storyGid: string, text: string): Promise<AsanaRawMessage>
+  fetchTask: (taskGid: string) => Promise<AsanaTask>
+  likeStory: (storyGid: string) => Promise<void>
+  postStory: (taskGid: string, text: string, options?: { isPinned?: boolean }) => Promise<AsanaRawMessage>
+  unlikeStory: (storyGid: string) => Promise<void>
+  updateStory: (storyGid: string, text: string) => Promise<AsanaRawMessage>
 }
 
 export function createAsanaApiClient(accessToken: string, baseUrl: string): AsanaApiClient {

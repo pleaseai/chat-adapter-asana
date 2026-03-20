@@ -1,4 +1,5 @@
 import type { AsanaAdapterConfig } from './types'
+import process from 'node:process'
 import { AsanaAdapter } from './adapter'
 
 /**

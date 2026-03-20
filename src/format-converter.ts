@@ -1,7 +1,6 @@
-import type { FormattedContent } from 'chat'
-import { parseMarkdown, stringifyMarkdown } from 'chat'
+import type { AdapterPostableMessage, FormattedContent } from 'chat'
 import { extractCard } from '@chat-adapter/shared'
-import type { AdapterPostableMessage } from 'chat'
+import { parseMarkdown, stringifyMarkdown } from 'chat'
 
 /**
  * Convert Asana story text to mdast AST.
@@ -30,7 +29,8 @@ export function renderPostable(message: AdapterPostableMessage): string {
   if (card) {
     // Render card as plain text fallback
     const lines: string[] = []
-    if (card.title) lines.push(card.title)
+    if (card.title)
+      lines.push(card.title)
     return lines.join('\n')
   }
 

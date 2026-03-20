@@ -20,28 +20,28 @@ npm install chat chat-adapter-asana
 ## Usage
 
 ```typescript
-import { Chat } from "chat";
-import { createAsanaAdapter } from "chat-adapter-asana";
-import { createMemoryState } from "@chat-adapter/state-memory";
+import { createMemoryState } from '@chat-adapter/state-memory'
+import { Chat } from 'chat'
+import { createAsanaAdapter } from 'chat-adapter-asana'
 
 const bot = new Chat({
-  userName: "asana-bot",
+  userName: 'asana-bot',
   adapters: {
     asana: createAsanaAdapter({
       accessToken: process.env.ASANA_ACCESS_TOKEN!,
     }),
   },
   state: createMemoryState(),
-});
+})
 
 bot.onNewMention(async (thread, message) => {
-  await thread.post("Hello from Asana!");
-});
+  await thread.post('Hello from Asana!')
+})
 
 // Wire up the webhook in your HTTP framework
 // e.g. Next.js App Router:
 export async function POST(request: Request) {
-  return bot.webhooks.asana(request);
+  return bot.webhooks.asana(request)
 }
 ```
 
