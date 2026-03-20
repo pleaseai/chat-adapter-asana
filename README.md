@@ -2,6 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/chat-adapter-asana)](https://www.npmjs.com/package/chat-adapter-asana)
 [![npm downloads](https://img.shields.io/npm/dm/chat-adapter-asana)](https://www.npmjs.com/package/chat-adapter-asana)
+[![codecov](https://codecov.io/gh/pleaseai/chat-adapter-asana/graph/badge.svg)](https://codecov.io/gh/pleaseai/chat-adapter-asana)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Asana adapter for [Chat SDK](https://chat-sdk.dev/docs). Maps Asana task comment threads to the Chat SDK Thread/Message model.

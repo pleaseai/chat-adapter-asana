@@ -33,6 +33,7 @@
   "devDependencies": {
     "@chat-adapter/state-memory": "^4.0.0",
     "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^4.1.0",
     "chat": "^4.20.2",
     "tsup": "^8.3.0",
     "typescript": "^5.7.0",
