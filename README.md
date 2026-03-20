@@ -3,6 +3,10 @@
 [![npm version](https://img.shields.io/npm/v/chat-adapter-asana)](https://www.npmjs.com/package/chat-adapter-asana)
 [![npm downloads](https://img.shields.io/npm/dm/chat-adapter-asana)](https://www.npmjs.com/package/chat-adapter-asana)
 [![codecov](https://codecov.io/gh/pleaseai/chat-adapter-asana/graph/badge.svg)](https://codecov.io/gh/pleaseai/chat-adapter-asana)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=pleaseai_chat-adapter-asana&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=pleaseai_chat-adapter-asana)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=pleaseai_chat-adapter-asana&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=pleaseai_chat-adapter-asana)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=pleaseai_chat-adapter-asana&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=pleaseai_chat-adapter-asana)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=pleaseai_chat-adapter-asana&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=pleaseai_chat-adapter-asana)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Asana adapter for [Chat SDK](https://chat-sdk.dev/docs). Maps Asana task comment threads to the Chat SDK Thread/Message model.
