@@ -1,7 +1,7 @@
 {
   "name": "chat-adapter-asana",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Asana adapter for Chat SDK — task comment threads",
   "license": "MIT",
   "homepage": "https://github.com/pleaseai/chat-adapter-asana#readme",
